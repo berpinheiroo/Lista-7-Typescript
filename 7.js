@@ -1,18 +1,18 @@
-console.log(ContarCaracteresRepetidos("aabcde333"));
-function ContarCaracteresRepetidos(palavra) {
-    var contadorCaractere = 0;
-    var arrayPalavra = palavra.split('');
-    arrayPalavra.forEach(function (x) {
-        var contadorRepetido = 0;
-        for (var i = 0; i < arrayPalavra.length; i++) {
-            if (x == arrayPalavra[i]) {
-                contadorRepetido++;
+console.log(RepeatedLettersCounter("aabcde333"));
+function RepeatedLettersCounter(word) {
+    var letterCounter = 0;
+    var arrayWord = word.split('');
+    arrayWord.forEach(function (x) {
+        var repeatedCounter = 0;
+        for (var i = 0; i < arrayWord.length; i++) {
+            if (x == arrayWord[i]) {
+                repeatedCounter++;
             }
         }
-        if (contadorRepetido > 1) {
-            arrayPalavra = arrayPalavra.filter(function (caractere) { return caractere == x; });
-            contadorCaractere++;
+        if (repeatedCounter > 1) {
+            arrayWord = arrayWord.filter(function (letter) { return letter == x; });
+            letterCounter++;
         }
     });
-    return contadorCaractere;
+    return letterCounter;
 }
