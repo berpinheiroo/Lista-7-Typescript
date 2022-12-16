@@ -16,22 +16,30 @@
 //     })
 //     return letterCounter
 // }  
-var names = ["Bernardo", "Argollo"];
-ReturnText(names);
-function ReturnText(names) {
-    if (names.length == 0) {
-        console.log("No one liked it.");
-    }
-    else if (names.length == 1) {
-        console.log(names[0] + " liked it.");
-    }
-    else if (names.length == 2) {
-        console.log(names[0] + " e " + names[1] + " liked it.");
-    }
-    else if (names.length == 3) {
-        console.log(names[0] + ", " + names[1] + " and " + names[2] + " liked it.");
-    }
-    else if (names.length > 3) {
-        console.log(names[0] + ", " + names[1] + " and others " + (names.length - 2) + " liked it.");
-    }
+// let names : string[] = ["Bernardo", "Argollo"]
+// ReturnText(names)
+// function ReturnText(names : string[]) : void{
+//     if (names.length == 0){
+//         console.log("No one liked it.")
+//     }else if(names.length == 1){
+//         console.log(names[0]+ " liked it.")
+//     }else if(names.length == 2){
+//         console.log(names[0]+ " e " +names[1]+ " liked it.")
+//     }else if(names.length == 3){
+//         console.log(names[0]+ ", " +names[1]+ " and " +names[2]+ " liked it.")
+//     }else if(names.length > 3){
+//         console.log(names[0]+ ", " +names[1]+ " and others " +(names.length - 2)+ " liked it.")
+//     }
+// }
+console.log(CamelCase("frase camel case"));
+function CamelCase(string) {
+    var arrayString = string.split(' ');
+    var arrayString2 = [];
+    arrayString.forEach(function (x) {
+        var arrayX = x.split('');
+        arrayX[0] = arrayX[0].toUpperCase();
+        x = arrayX.join('');
+        arrayString2.push(x);
+    });
+    return arrayString2.join('');
 }
